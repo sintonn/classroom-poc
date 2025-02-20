@@ -174,13 +174,15 @@ const move = (direction: string, isPressed: boolean) => {
 
 /* Mobile Controls */
 .mobile-controls {
-  position: absolute;
+  position: fixed; /* Change from absolute to fixed */
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999; /* Ensure buttons stay on top */
+  pointer-events: auto; /* Prevent clicks being blocked */
 }
 
 .mobile-controls div {
